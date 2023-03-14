@@ -32,6 +32,17 @@
                     </c:if>
                     <c:if test="${page == 'add'}" >
                         <h1 class="text-center">ADD TODO</h1>
+                        <form action="<c:url value='saveTodo'/>" method="post" modelAttribute="todo">
+                            <div class="form-group">
+                                <input type="text" name="todoTitle" class="form-control" placeholder="Enter to-do title">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="todoContent" class="form-control" rows="10" placeholder="Enter to-do content"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-success">Add To-do</button>
+                            </div>
+                        </form>
                     </c:if>
 
                 </div>
