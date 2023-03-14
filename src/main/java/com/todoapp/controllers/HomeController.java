@@ -1,5 +1,6 @@
 package com.todoapp.controllers;
 
+import com.todoapp.models.Todo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,9 @@ public class HomeController {
     @RequestMapping("/add")
     public String Add(Model model){
         model.addAttribute("page", "add");
+        
+        Todo todo = new Todo();
+        model.addAttribute("todo", todo);
         return "index";
     }
 }
