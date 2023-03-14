@@ -22,12 +22,18 @@
                     <h3 class="text-center">Options</h3>
                     <div class="list-group">
                         <button type="button" class="list-group-item list-group-item-action active" aria-current="true">Menu</button>
-                        <button type="button" class="list-group-item list-group-item-action">Add To-do</button>
-                        <button type="button" class="list-group-item list-group-item-action">View To-do</button>
+                        <a href="<c:url value='/add'/>" type="button" class="list-group-item list-group-item-action">Add To-do</a>
+                        <a href="<c:url value='/home'/>"type="button" class="list-group-item list-group-item-action">View To-do</a>
                     </div>
                 </div>
                 <div class="col-md-10">
-                    <h3 class="text-center">Content</h3>
+                    <c:if test="${page == 'home'}" >
+                        <h1 class="text-center">All TODOS</h1>
+                    </c:if>
+                    <c:if test="${page == 'add'}" >
+                        <h1 class="text-center">ADD TODO</h1>
+                    </c:if>
+
                 </div>
             </div>
         </div>
