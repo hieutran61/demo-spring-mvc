@@ -1,19 +1,25 @@
 package com.todoapp.models;
 
-import java.util.Date;
-
 public class Todo {
+    private int id;
     private String todoTitle;
     private String todoContent;
-    private Date todoDate;
 
     public Todo() {
     }
 
-    public Todo(String todoTitle, String todoContent, Date todoDate) {
+    public Todo(int id, String todoTitle, String todoContent) {
+        this.id = id;
         this.todoTitle = todoTitle;
         this.todoContent = todoContent;
-        this.todoDate = todoDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTodoTitle() {
@@ -32,18 +38,8 @@ public class Todo {
         this.todoContent = todoContent;
     }
 
-    public Date getTodoDate() {
-        return todoDate;
-    }
 
-    public void setTodoDate(Date todoDate) {
-        this.todoDate = todoDate;
-    }
-
-    @Override
-    public String toString() {
-        return this.getTodoTitle() + " : " + this.getTodoContent();
-    }
+  
     
     
     
